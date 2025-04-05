@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="../CSS/photos.css">
+</head>
+<body>
+    <div class="container active" id="page1">
+        <div class="collage">
+            <img src="../images/bracelet1.jpg" alt="Photo 1">
+            <img src="../images/bracelet2.jpg" alt="Photo 2">
+            <img src="../images/ring.jpg" alt="Photo 3">
+            <img src="../images/bracelet3.jpg" alt="Photo 4">
+            <img src="../images/bracelet4.jpg" alt="Photo 5">
+        </div>
+        <div class="caption">Hopefully, you're keeping this safe with you <3 </div>
+        <button class="next-btn" onclick="showPage(2)">Next</button>
+    </div>
+
+    <div class="container" id="page2">
+        <img src="../images/wotership.jpg" alt="Photo 6" width="80%">
+        <img src="../images/d1.jpg" alt="Photo 7" width="80%">
+        <img src="../images/IMG_8200.jpg" alt="Photo 8" width="80%">
+        <img src="../images/d2.jpg" alt="Photo 9" width="80%">
+        <div class="caption">Also how can I not add your cute boiled egg too :p </div>
+        <button class="next-btn" onclick="showPage(3)">Next</button>
+    </div>
+
+    <div class="container" id="page3">
+        <img src="../images/IMG_8998.png" alt="Photo 10" width="80%">
+        <img src="../images/IMG_9632.png" alt="Photo 11" width="80%">
+        <div class="caption">And also I think he likes me too :3</div>
+        <button class="next-btn" onclick="showPage(4)">Next</button>
+    </div>
+
+    <div class="container" id="page4">
+        <img src="../images/cat1.jpg" alt="Photo 12" width="80%">
+        <img src="../images/cat3.jpg" alt="Photo 13" width="80%">
+        <img src="../images/cat2.jpg" alt="Photo 14" width="80%">
+        <div class="caption">And this little fellow over here too whom you fell in love with :)</div>
+        <button class="next-btn" onclick="showPage(5)">Next</button>
+    </div>
+
+    <div class="container" id="page5">
+        <img src="../images/open4a_surpise_5.png" alt="Photo 15" width="50%">
+        <div class="caption">And ofc this precious gift from you (This is my phone's wallpaper btw ❤️)</div>
+        <button class="next-btn" onclick="location.href='playlist.html'">Next</button>
+    </div>
+
+    <script>
+        function showPage(pageNumber) {
+            document.querySelectorAll('.container').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById('page' + pageNumber).classList.add('active');
+        }
+    </script>
+</body>
+</html>

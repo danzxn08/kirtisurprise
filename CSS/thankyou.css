@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #ff9a9e, #fad0c4);
+    color: white;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+.thank-you-message {
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite alternate ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}

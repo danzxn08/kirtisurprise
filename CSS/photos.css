@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+
+body {
+    font-family: 'Bonheur Royale', cursive;
+    text-align: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Flowing clouds effect */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: moveClouds 60s linear infinite;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+@keyframes moveClouds {
+    from { background-position: 0 0; }
+    to { background-position: -100% 0; }
+}
+
+.container {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* Page-specific styles */
+#page1 { background: linear-gradient(135deg); }
+#page2 { background: linear-gradient(135deg); }
+#page3 { background: linear-gradient(135deg); }
+#page4 { background: linear-gradient(135deg); }
+#page5 { background: linear-gradient(135deg); }
+
+/* Remove solid pink bar */
+.fade-bar {
+    display: none;
+}
+
+/* Image styles with overlapping effect */
+.collage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+}
+
+.collage img {
+    width: 14%; /* Covers about 1/8th of the screen */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    opacity: 0.9;
+}
+
+.collage img:nth-child(1) { transform: rotate(-6deg) translateX(50px); }
+.collage img:nth-child(2) { transform: rotate(5deg) translateX(30px) translateY(-10px); }
+.collage img:nth-child(3) { transform: rotate(-5deg) translateX(5px) translateY(-10px); }
+.collage img:nth-child(4) { transform: rotate(6deg) translateY(-10px) translateX(-20px); }
+.collage img:nth-child(5) { transform: rotate(-7deg) translateY(-20px) translateX(-40px); }
+
+#page3 img {
+    width: 18%;
+    border-radius: 30px;
+}
+
+/* Page 3 Specific Image Adjustments */
+
+#page3 img:nth-child(1) {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 20%;
+    transform: rotate(-5deg);
+    border-radius: 20px;
+}
+
+#page3 img:nth-child(2) {
+    position: absolute;
+    top: 25%;
+    right: 35%;
+    width: 15%;
+    transform: rotate(8deg);
+    border-radius: 20px;
+}
+
+#page3 .caption {
+    position: absolute;
+    bottom: 25%;
+    left: 35%;
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#page3 .next-btn {
+    position: absolute;
+    bottom: 18%;
+    left: 46%;
+}
+
+/* Unique image adjustments for each page */
+#page2 img, #page4 img {
+    width: 16%;
+    border-radius: 25px;
+    opacity: 0.95;
+}
+
+#page4 img:nth-child(1) {
+    position: absolute;
+    top: 17.5%;
+    left: 61%;
+    width: 20%;
+    border-radius: 20px;
+}
+
+#page4 img:nth-child(2) {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 20%;
+    border-radius: 20px;
+}
+
+#page4 img:nth-child(3) {
+    position: absolute;
+    top: 17.5%;
+    right: 61%;
+    width: 20%;
+    border-radius: 20px;
+}
+
+#page4 .caption {
+    position: absolute;
+    bottom: 20%;
+    left: 27.5%;
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 50px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#page4 .next-btn {
+    position: absolute;
+    bottom: 15%;
+    left: 48%;
+}
+
+#page5 img {
+    width: 18%;
+    border-radius: 30px;
+}
+
+.caption {
+    margin-top: 15px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.next-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    backdrop-filter: blur(10px);
+}
+
+.next-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: #333;
+}

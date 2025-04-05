@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="../CSS/feedback.css">
+    <script>
+        function showPopup(event) {
+            event.preventDefault();
+            let popup = document.createElement("div");
+            popup.innerHTML = `
+                <div class="popup">
+                    <p>Are you still simping for me ?</p>
+                    <button onclick="redirectToThankYou()">Yes</button>
+                    <button onclick="redirectToThankYou()">Absolutely</button>
+                </div>
+            `;
+            document.body.appendChild(popup);
+        }
+
+        function redirectToThankYou() {
+            window.open("thankyou.html", "_blank");
+        }
+    </script>
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="../audio/Jaden - BYE.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audio = document.getElementById("bg-music");
+    
+            function playMusic() {
+                audio.play().catch(error => console.log("Autoplay prevented:", error));
+                document.body.removeEventListener("click", playMusic);
+            }
+    
+            document.body.addEventListener("click", playMusic);
+        });
+    </script>
+    
+
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form onsubmit="showPopup(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <br>
+
+            <label for="smile">Which part of the site made you smile the most?</label>
+            <input type="text" id="smile" name="smile" required>
+
+            <br>
+
+            <label for="clip">Which clip of us gaming together was your favorite?</label>
+            <input type="text" id="clip" name="clip" required>
+
+            <fieldset>
+                <legend>How would you rate the site overall?</legend>
+                <input type="radio" name="rating" value="1"> ⭐<br>
+                <input type="radio" name="rating" value="2"> ⭐⭐<br>
+                <input type="radio" name="rating" value="3"> ⭐⭐⭐<br>
+                <input type="radio" name="rating" value="4"> ⭐⭐⭐⭐<br>
+                <input type="radio" name="rating" value="5"> ⭐⭐⭐⭐⭐<br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Did the site make you fall in love with me all over again?</legend>
+                <input type="radio" name="love" value="falling_harder"> Yes, I’m falling even harder! 💘<br>
+                <input type="radio" name="love" value="sweet"> A little bit, it’s so sweet! 🥰<br>
+                <input type="radio" name="love" value="already_loved"> I already loved you but this just made it more special.<br>
+                <input type="radio" name="love" value="extra_awesomeness"> I’ve always loved you, this just added extra awesomeness!<br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>How would you describe the overall vibe of the site?</legend>
+                <input type="radio" name="vibe" value="romantic"> Romantic and sweet ❤️<br>
+                <input type="radio" name="vibe" value="funny"> Funny and playful 😂<br>
+                <input type="radio" name="vibe" value="nostalgic"> Nostalgic and emotional 😢<br>
+                <input type="radio" name="vibe" value="adventurous"> Adventurous and exciting 💥<br>
+                <input type="radio" name="vibe" value="perfect"> Just perfect, everything I love 💕<br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>What would you rate my creativity on a scale of 1 to 10 for creating this?</legend>
+                <input type="radio" name="creativity" value="10"> 10 (A true artist!)<br>
+                <input type="radio" name="creativity" value="9"> 9<br>
+                <input type="radio" name="creativity" value="8"> 8<br>
+                <input type="radio" name="creativity" value="7"> 7<br>
+                <input type="radio" name="creativity" value="6_or_below"> 6 or below<br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Did you feel like this site made you simp for me even more?</legend>
+                <input type="radio" name="simp" value="10"> 10/10 simp vibes 😘<br>
+                <input type="radio" name="simp" value="definitely"> Definitely, I’m swooning. 🥺<br>
+                <input type="radio" name="simp" value="blushed"> A little bit, I might have blushed. 😳<br>
+                <input type="radio" name="simp" value="already_in_love"> Nope, I was already in love! 💖<br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>On a scale of 1 to 10, how much did the personalized message make your heart melt?</legend>
+                <input type="radio" name="melt" value="10"> 10/10, I'm literally melting! 💓<br>
+                <input type="radio" name="melt" value="9"> 9<br>
+                <input type="radio" name="melt" value="8"> 8<br>
+                <input type="radio" name="melt" value="7"> 7<br>
+                <input type="radio" name="melt" value="6_or_below"> 6 or below (But still sweet!)<br>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Would you rate this birthday gift as the best you've ever gotten?</legend>
+                <input type="radio" name="gift" value="best"> Absolutely, this is #1! 🎉<br>
+                <input type="radio" name="gift" value="close"> Close to the top, but there are some other great ones too!<br>
+                <input type="radio" name="gift" value="thought_counts"> It’s the thought that counts, but I loved it!<br>
+                <input type="radio" name="gift" value="better_gifts"> I’ve had better birthday gifts, but this was super cute!<br>
+            </fieldset>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>

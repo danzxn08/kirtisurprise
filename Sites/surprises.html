@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprises</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #introText {
+            font-size: 50px;
+            opacity: 0;
+            animation: fadeInOut 4s ease-in-out forwards;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .media-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        video, img {
+            width: 1000px;
+            max-height: 70vh;
+            border-radius: 10px;
+        }
+
+        #caption {
+            margin-top: 30px;
+            font-size: 40px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Ensure full-width for proper positioning */
+        .controls {
+            position: absolute;
+            width: 100vw;  /* Full viewport width */
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none; /* Allows clicks to pass through */
+        }
+
+        .nav-button {
+            background-color: transparent;
+            border: none;
+            font-size: 48px;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            position: fixed; /* Keep them at the screen edges */
+            top: 50%;
+            transform: translateY(-50%);
+            transition: color 0.3s ease;
+            z-index: 10; /* Ensure they are on top */
+        }
+
+        /* Left & Right button positions */
+        .prev {
+            left: 30px; /* Move closer to the left edge */
+        }
+
+        .next {
+            right: 30px; /* Move closer to the right edge */
+        }
+
+        .nav-button:hover {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="introText">Now, let's take a look back at our beautiful journey over the past 5 years.</div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/1 kirti ace.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">First one, ofc one of my favourite aces by you <3</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/2 4.mp4" type="video/mp4">
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">But then you also die like this kekw</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/3 6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Like who can even die like this :p</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/4 7.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Definetely not me cuh 🗿</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/5 pog momint.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Here, have a look at the situations and battles I put myself in to get you the rarest skins tho :o (Just for you) </div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/6 got her the blub blub.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Also do you remember the time when I bought this skin for you and you got an ace in the first try as well ;)</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/7 grudge.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">And then you proceed to sabotage me like this ;(</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/8 khelna sikh lo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">And again :((( TT</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/9 scold_proud_taunt.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Lets not forget how you scolded me, got proud from your 2 kills and taunted me all at once 💪💪 (thanku for saving me :D)</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/10 Hmm - Trim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">You can say whatever you want but that "hmm" was one of the cutest things you ever did and I will never forget it</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/11 babushka.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">And then here you are, laughing uncontrollably 🤣🥹</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/12 yaaaaa.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">"YYYAAAAAAAAAAA" 🤣🤣🤣</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/13 i see.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">My woman died mid photoshoot 😭😭</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/14 yoyocheckthisout.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Lil schlawg had something to show us here 🤨</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/15 howdoudothat.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">This will forever be printed in my mind and heart 😁</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/16 nostraighrepliesbcadhd.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">The times when ya'll just refuse to give a straight answer and beat around the bush 😭😭 (I blame ADHD, not you)</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/17 gaming yay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Me with you when I get nervous (I played fn a long time later back then so spare me a little 🗿🙏)</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/18 you are dead.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">But then your fortnite gameplay is on par with mine as well 🎀</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/19 nice jett.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Lil schlawg got furious when I got commended for good gameplay 🤣🤣 "NICE JETT!!??"</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/20 spin.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">I knew it was over for me the moment you unmuted and said my name like that (Shiver me timbers) 💀💀</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/21 nonchalant.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Shlawg finnna tryna act nonchalant when shooing away the witch but fails miserably 💀🙏</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/22 rero sussy boi baka.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">The karen flashes herself and then blames it on the man (deserved) 🤣</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/23 sloworb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">If im not wrong then its you who plays the sage most (53 hours) among us (just saying casually & definetely not directing it towards anything)</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/24 SUCKTIMAAN.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Lil homie really said "SUCKTIMAAN" 😯😲</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/25 YEYEYYEYEYE - Trim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Sometimes lil homie lets her intrusive thoughts win and lets it all out 💀</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/26 cowboy.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">We all really felt the connection & understanding between that "Ye dekho ye dekho" & "Dekhliya dekhliya"</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/27 danzdanzdanzdanzttrrrrtrrrrrtrrrrtrrrrr.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Lil shlawg lost in her own sauce with danz (me) (holay molay 😯) </div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/28 massive clove ult.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Lil dawg tried pulling up a massive clove ult edit for the reels (failed miserably) 🤣🤣</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/29 Sea of Thieves 2023.07.29 - 16.47.22.02.DVR.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">My woman just called them 'stupid', made fun of them for being vietnamese/indonesian and leaves with no further explanation</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/30 shlawgstolethepan.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Lil fella stole the pan on which I was finna keep the meat on and it definetely had fish in it (and proceeds to laugh uncontrollably) (I am the blue and your the red character)</div>
+    </div>
+
+    <div class="media-container">
+        <button class="nav-button prev" onclick="prevMedia()">❮</button>
+        <video controls>
+            <source src="../media/31 latest ace.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="nav-button next" onclick="nextMedia()">❯</button>
+        <div id="caption">Now for the last clip I will end with my ace (I looked at the wrong pillar when you told me "pillars" 😭)</div>
+    </div>
+
+    <div id="finalMessage" style="display: none; flex-direction: column; align-items: center; justify-content: center;">
+        <h2>That's all the clips! 🎉</h2>
+        <button onclick="location.href='photos.html'" style="padding: 15px 30px; font-size: 24px; margin-top: 20px; border-radius: 10px; border: none; background-color: #ffffff; color: black; cursor: pointer;">See Some Photos 📸</button>
+    </div>
+    
+    <script>
+        const mediaContainers = document.querySelectorAll(".media-container");
+        const finalMessage = document.getElementById('finalMessage');
+        let currentIndex = 0;
+    
+        function showMedia(index) {
+            mediaContainers.forEach((container, i) => {
+                container.style.display = i === index ? "flex" : "none";
+            });
+    
+            // Show final message when all media are done
+            if (index >= mediaContainers.length) {
+                finalMessage.style.display = 'flex';
+            } else {
+                finalMessage.style.display = 'none';
+            }
+        }
+    
+        function nextMedia() {
+            currentIndex++;
+            showMedia(currentIndex);
+        }
+    
+        function prevMedia() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showMedia(currentIndex);
+            }
+        }
+    
+        // Initial setup: Hide intro, show first media after animation
+        setTimeout(() => {
+            document.getElementById("introText").style.display = "none";
+            showMedia(currentIndex);
+        }, 4000);
+    </script>
+    
+</body>
+</html>

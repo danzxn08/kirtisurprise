@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My feelings</title>
+    <link rel="stylesheet" href="../CSS/feelings.css"> 
+    <link rel="stylesheet" href="../CSS/rizzmeter.css">
+</head>
+<body>
+    <div class="feelings_message">
+        <div class="feels-message">
+        <h1>My feelings</h1>
+        </div>
+        <br>
+        <div class="feels_message">
+        <p>Hello Kirti, I wish you a very very veryyyyy happy birthday. Finally you are 24 years old lets go (you can enjoy yourself being 4 years older than me for the next 5 months but I will catchup with you again soon).
+
+        I am very thankful to my fate and god that I have been with you for the past 5 years. I cannot even imagine how I would have been if I hadn't met you back then like I learned so many things from you and even still I am learning new things because of you. You are the person who motivates me so much and tell me to push myself further beyond my limits which no one else has ever done before. You are such a joyous person and incredibly amazing that I wouldn't wanna even live without you at this point. I am proud to say that I met you and am with you at the very moment. You are the best player and partner in Valorant, Sea of Thieves, Human Fall Flat, Fortnite and so many other games we have played together. I want to be the one to play all the games with you which you wanna play as well. I enjoyed Supermarket Simulator so much with you that it convinced me that my semester break was well spent and couldn't have been better. Thank you so much for playing Supermarket Simulator with me and also thank you so much for existing and being born in the same era as me. I couldn't have asked for something better than you ever in my life from anyone. You are the most beautiful person I have ever seen from both inside and outside. You just are perfect for me & your eyes, lips, nose, cheeks, smile and even ears are very pretty. You are my home <3</p>
+        </div>
+        <div class="rizz-meter-container">
+            <div class="rizz-text rizz-top">RIZZ</div>
+            <div class="rizz-meter">
+                <div class="needle" id="needle"></div>
+                <div class="tick-marks"></div>
+            </div>
+            <div class="rizz-level" id="rizzLevel">0%</div>
+            <div id="emoji" style="display: none; font-size: 3rem; margin-top: 10px;"></div>
+            <div class="rizz-text rizz-bottom">METER</div>
+            <div class="rizz-controls">
+                <button onclick="changeRizz(-5)">-</button>
+                <button onclick="changeRizz(5)">+</button>
+            </div>
+            <button onclick="submitRizz()" class="submit-button">Submit</button>
+            <p id="rizzResult"></p>
+        </div>
+    
+        <style>
+            .rizz-text {
+                font-size: 4rem;
+                font-weight: 900;
+                color: #ffffff;
+                text-shadow: 4px 4px 8px rgba(255, 0, 0, 0.8);
+                font-family: 'Orbitron', sans-serif;
+            }
+            .rizz-top {
+                margin-bottom: 10px;
+            }
+            .rizz-bottom {
+                margin-top: 10px;
+            }
+            .rizz-controls {
+                margin-top: 20px;
+            }
+            .rizz-controls button {
+                font-size: 1.5rem;
+                margin: 5px;
+                padding: 10px 20px;
+                background: #ff4d4d;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: 'Orbitron', sans-serif;
+            }
+            .submit-button {
+                margin-top: 10px;
+                font-size: 1.2rem;
+                padding: 10px 20px;
+                background: #ff1a1a;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: 'Orbitron', sans-serif;
+            }
+            #rizzResult {
+                font-size: 1.5rem;
+                color: white;
+                margin-top: 10px;
+                font-family: 'Orbitron', sans-serif;
+            }
+        </style>
+    
+        <script>
+            let rizzValue = 0;
+    
+            function changeRizz(amount) {
+                rizzValue = Math.max(0, Math.min(100, rizzValue + amount));
+                updateRizzMeter(rizzValue);
+            }
+    
+            function updateRizzMeter(value) {
+                let needle = document.getElementById("needle");
+                let rizzText = document.getElementById("rizzLevel");
+                let rotation = (value / 100) * 180 - 90;
+                needle.style.transform = `rotate(${rotation}deg)`;
+                rizzText.innerText = `${value}%`;
+            }
+    
+            function submitRizz() {
+                let emojis = ["😭", "😨", "😟", "😢", "😯", "😊", "😀", "😆", "😍", "💖🎉"];
+                let index = Math.min(Math.floor(rizzValue / 10), 9);
+                let emoji = emojis[index];
+                document.getElementById("emoji").innerText = emoji;
+                document.getElementById("emoji").style.display = "block";
+                document.getElementById("rizzResult").innerText = `You rated Arin's rizz ${rizzValue}% ${emoji}`;
+            }
+        </script>
+        <button onclick="window.location.href='surprises.html'" class="surprise-button">More Surprises</button>
+
+        <style>
+            .surprise-button {
+                position: absolute;
+                top: 50%; /* Change these values to move the meter */
+                left: -40%;
+                font-size: 1.5rem;
+                padding: 12px 24px;
+                background: #fa5e9f;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-family: 'Great Vibes', sans-serif;
+                transition: background 0.3s ease;
+            }
+            .surprise-button:hover {
+                background: #ff7b7b;
+            }
+        </style>
+</body>
+</html>
